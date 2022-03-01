@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import NavBar from "./component/navBar";
+import Banner from "./component/banner";
+import Services from "./component/services";
+import AboutUs from "./component/aboutUs";
+import NewsLetter from "./component/newsLetter";
+import Experience from "./component/experience";
+import Footer from "./component/footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { OtechContext } from "./otechContext";
 
 function App() {
+  const { setIsSubmenuOpen } = useContext(OtechContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <section onMouseOver={() => setIsSubmenuOpen("")}>
+        <Banner />
+        <Services />
+        <AboutUs />
+        <NewsLetter />
+        {/* <Experience /> */}
+        <Footer />
+      </section>
+    </>
   );
 }
 

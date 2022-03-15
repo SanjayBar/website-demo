@@ -1,0 +1,96 @@
+.main-pricing {
+  position: relative;
+  padding-bottom: 40px;
+}
+.pricing-title {
+  text-align: center;
+}
+
+.pricing-box {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 2px 2px 60px rgb(0 0 0 / 8%);
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.4s;
+}
+.pricing-box:hover {
+  background-color: rgba(255, 80, 102, 0.1);
+}
+
+.pricing-box-text {
+  position: relative;
+  padding: 34px 40px 40px 40px;
+  z-index: 1;
+}
+.pricing-box-text .h4-title {
+  color: #fc9d44;
+  margin-bottom: 23px;
+}
+.pricing-box-text .h4-title span {
+  font-size: 18px;
+  line-height: 28px;
+  color: #010f2e;
+  font-weight: 600;
+}
+.pricing-box-text .h3-title {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.pricing-img img {
+  width: auto;
+  margin: 0 auto;
+  height: 100px;
+  display: inline-block;
+  margin-bottom: 22px;
+}
+.pricing-text-list {
+  padding-top: 29px;
+  border-top: 1px solid #cccccc;
+  text-align: left;
+}
+.pricing-text-list ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 29px;
+}
+.pricing-text-list ul li {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 18px;
+  position: relative;
+  padding-left: 41px;
+}
+.pricing-text-list ul li::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  width: 26px;
+  height: 26px;
+  background-image: url(../assets/icon/check.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pricing-text-list ul .disabled {
+  background: linear-gradient(to right, #696969, #ffffff);
+  opacity: 0.3;
+}
+@media screen and (max-width: 991px) {
+  .pricing-box .sec-btn {
+    margin-left: 23%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pricing-box .sec-btn {
+    margin-left: 33%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pricing-box .sec-btn {
+    margin-left: 38%;
+  }
+}

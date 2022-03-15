@@ -1,0 +1,44 @@
+.main-contact-us {
+  position: relative;
+  padding-top: 115px;
+  margin-bottom: -150px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .main-contact-us {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-contact-us {
+    padding-top: 60px;
+  }
+}
+
+.contact-us-content {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  padding: 53px 60px 40px 60px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 40px rgb(0 0 0 / 8%);
+  text-align: center;
+}
+
+.contact-us-content .contact-form .form-input {
+  border: 1px solid #343a40;
+  border-radius: 4px;
+}
+
+.contact-us-content .form-box .sec-btn {
+  width: 100%;
+}
+
+.empty-contact-us-div {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(to right, #ff5066, #fc9d44, #fc9d44, #ff5066);
+  opacity: 0.9;
+  margin-bottom: -33px;
+}

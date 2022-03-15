@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import "./aboutUs.css";
+import "./aboutUsC.css";
 
-function AboutUs() {
+function AboutUsC() {
   return (
     <section className="main-about-us">
       <Container>
@@ -43,4 +43,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default AboutUsC;

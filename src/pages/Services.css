@@ -1,0 +1,8 @@
+.service-news-letter {
+  padding: 80px 0;
+}
+@media screen and (max-width: 576px) {
+  .service-news-letter {
+    padding: 60px 0;
+  }
+}

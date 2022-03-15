@@ -1,0 +1,126 @@
+.contact-page-content {
+  position: relative;
+  padding: 48px 0 60px 0;
+}
+@media screen and (min-width: 991px) {
+  .contact-page-content {
+    padding: 85px 0 120px 0;
+  }
+}
+
+.contact-page-form .contact-form .form-input {
+  border: 1px solid #343a40;
+  border-radius: 4px;
+}
+
+.contact-page-form .contact-form .sec-btn {
+  margin-left: 0;
+  transform: translateX(0);
+}
+@media screen and (min-width: 991px) {
+  .contact-page-img img {
+    height: 534px;
+    width: 580px;
+    float: right;
+    position: relative;
+    right: -30px;
+  }
+}
+
+.contact-page-link {
+  padding-top: 0;
+}
+@media screen and (min-width: 991px) {
+  .contact-page-link {
+    padding-top: 46px;
+  }
+}
+.contact-link-box {
+  position: relative;
+  width: 100%;
+  padding: 35px 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 1px 1px 60px rgb(0 0 0 / 8%);
+  overflow: hidden;
+}
+@media screen and (min-width: 991px) {
+  .contact-link-box {
+    padding: 35px 25px;
+    margin-bottom: 0;
+  }
+}
+.contact-link-text {
+  position: relative;
+  z-index: 1;
+}
+.contact-link-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  border: 2px solid #ffc3cb;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+.contact-link-text p {
+  margin-bottom: 0;
+  transition: 0.3s;
+}
+.contact-link-text p a {
+  display: inline-block;
+  color: #777777;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.contact-link-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to right, #ff5066, #fc9d44);
+  border-radius: 4px;
+  transition: 0.5s;
+  z-index: 0;
+}
+.contact-link-box:hover::before {
+  height: 100%;
+  top: auto;
+  bottom: 0;
+}
+
+.contact-map {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  z-index: 0;
+}
+@media screen and (min-width: 767px) {
+  .contact-map {
+    height: 450px;
+  }
+}
+@media screen and (min-width: 991px) {
+  .contact-map {
+    height: 550px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .contact-map {
+    height: 550px;
+  }
+}
+.contact-page-empty-div {
+  height: 40px;
+  background: rgba(128, 128, 128, 0.1);
+  margin-bottom: -33px;
+}

@@ -6,7 +6,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-import mainLogo from "../assets/logo/mainLogo.jpg";
+import mainLogo from "../assets/logo/mainLogo.png";
 import "./footer.css";
 
 function Footer() {

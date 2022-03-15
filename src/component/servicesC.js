@@ -1,8 +1,8 @@
 import React from "react";
-import "./services.css";
+import "./servicesC.css";
 import { Col, Container, Row } from "react-bootstrap";
 
-function Services() {
+function ServicesC() {
   return (
     <>
       <section className="main-our-services">
@@ -84,4 +84,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default ServicesC;

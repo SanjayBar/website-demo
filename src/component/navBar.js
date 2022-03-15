@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import mainLogo from "../assets/logo/mainLogo.jpg";
+import mainLogo from "../assets/logo/mainLogo.png";
 import menuIcon from "../assets/icon/menuIcon.png";
 import { BsChevronDown } from "react-icons/bs";
 import { FaSistrix } from "react-icons/fa";

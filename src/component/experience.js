@@ -20,6 +20,7 @@ function Experience() {
             </div>
             <div className="experience-skills">
               <div className="experience-skill-list">
+                {/* designing */}
                 <div className="experience-skill-bar-box">
                   <h5 className="h3-title experience-skill-bar-title">
                     Designing
@@ -34,7 +35,46 @@ function Experience() {
                     ></div>
                   </div>
                 </div>
+                {/* development */}
+                <div className="experience-skill-bar-box">
+                  <h5 className="h3-title experience-skill-bar-title">
+                    Development
+                  </h5>
+                  <div className="h3-title experience-skill-bar-percentage">
+                    <span className="experience-counting">70</span>%
+                  </div>
+                  <div className="experience-skill-bar">
+                    <div
+                      className="experience-skill-bar-inner"
+                      style={{ width: "70%" }}
+                    ></div>
+                  </div>
+                </div>
+                {/* optimization */}
+                <div className="experience-skill-bar-box">
+                  <h5 className="h3-title experience-skill-bar-title">
+                    Optimization
+                  </h5>
+                  <div className="h3-title experience-skill-bar-percentage">
+                    <span className="experience-counting">60</span>%
+                  </div>
+                  <div className="experience-skill-bar">
+                    <div
+                      className="experience-skill-bar-inner"
+                      style={{ width: "60%" }}
+                    ></div>
+                  </div>
+                </div>
               </div>
+            </div>
+          </Col>
+
+          <Col lg={6} className="order-lg-2 order-1">
+            <div className="experience-img">
+              <img
+                src="https://shivaa.dexignzone.com/shivaa-HTML/homepage_1/assets/images/experience-img.svg"
+                alt="Experience Image"
+              />
             </div>
           </Col>
         </Row>

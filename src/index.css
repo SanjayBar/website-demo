@@ -20,7 +20,7 @@ a {
 .sec-btn {
   height: 60px;
   display: inline-block;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 30px;
   color: #ffffff;
   font-weight: 500;
@@ -120,6 +120,11 @@ a {
   .form-input {
     height: 45px;
     padding: 12px 20px;
+  }
+}
+@media screen and (min-width: 390px) {
+  .sec-btn {
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 575px) {

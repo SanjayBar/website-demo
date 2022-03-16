@@ -2,10 +2,18 @@ import React, { useState, useEffect, useContext } from "react";
 import mainLogo from "../assets/logo/mainLogo.png";
 import menuIcon from "../assets/icon/menuIcon.png";
 import { BsChevronDown } from "react-icons/bs";
-import { FaSistrix } from "react-icons/fa";
+import {
+  FaSistrix,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
 import { Container, Col, Row, Nav } from "react-bootstrap";
 import { OtechContext } from "../otechContext";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./navBar.css";
 
 const pageSubItems = [
@@ -21,6 +29,7 @@ const blogSubItems = ["Blog", "Blog List", "Blog Detail"];
 function NavBar() {
   const { isSubmenuOpen, setIsSubmenuOpen } = useContext(OtechContext);
   const [sideMainNav, setSideMainNav] = useState(false);
+  const [extraInfo, setExtraInfo] = useState(false);
 
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
@@ -42,6 +51,7 @@ function NavBar() {
       setIsSubmenuOpen("");
     }
   };
+  console.log(extraInfo);
 
   return (
     <>
@@ -54,9 +64,9 @@ function NavBar() {
             <Col lg={12}>
               <div className="header-box">
                 <div className="site-logo">
-                  <Link to="/">
+                  <NavLink to="/">
                     <img src={mainLogo} className="img-logo" />
-                  </Link>
+                  </NavLink>
                 </div>
                 <div className="header-menu">
                   <Nav
@@ -76,15 +86,15 @@ function NavBar() {
                     </button>
                     <ul className="header-menu-items">
                       <li>
-                        <Link to="/">Home</Link>
+                        <NavLink to="/">Home</NavLink>
                       </li>
 
                       <li>
-                        <Link to="/about-us">About Us</Link>
+                        <NavLink to="/about-us">About Us</NavLink>
                       </li>
 
                       <li>
-                        <Link to="/services">Services</Link>
+                        <NavLink to="/services">Services</NavLink>
                       </li>
 
                       <li
@@ -94,7 +104,7 @@ function NavBar() {
                             : "sub-items"
                         }`}
                       >
-                        <Link to="#">
+                        <Link to="">
                           Pages
                           <BsChevronDown
                             style={{
@@ -106,19 +116,21 @@ function NavBar() {
                         </Link>
                         <ul className="sub-menu">
                           <li>
-                            <Link to="/pricing">Pricing</Link>
+                            <NavLink to="/pricing">Pricing</NavLink>
                           </li>
                           <li>
-                            <Link to="/portfolio">Portfolio</Link>
+                            <NavLink to="/portfolio">Portfolio</NavLink>
                           </li>
                           <li>
-                            <Link to="/portfolio-detail">Portfolio Detail</Link>
+                            <NavLink to="/portfolio-detail">
+                              Portfolio Detail
+                            </NavLink>
                           </li>
                           <li>
-                            <Link to="/team">Team</Link>
+                            <NavLink to="/team">Team</NavLink>
                           </li>
                           <li>
-                            <Link to="/FAQ">FAQ</Link>
+                            <NavLink to="/FAQ">FAQ</NavLink>
                           </li>
                         </ul>
                       </li>
@@ -130,7 +142,7 @@ function NavBar() {
                             : "sub-items"
                         }`}
                       >
-                        <Link to="#">
+                        <Link to="">
                           Blog
                           <BsChevronDown
                             style={{
@@ -142,16 +154,16 @@ function NavBar() {
                         </Link>
                         <ul className="sub-menu">
                           <li>
-                            <Link to="/blog-list">Blog List</Link>
+                            <NavLink to="/blog-list">Blog List</NavLink>
                           </li>
                           <li>
-                            <Link to="/blog-detail">Blog Detail</Link>
+                            <NavLink to="/blog-detail">Blog Detail</NavLink>
                           </li>
                         </ul>
                       </li>
 
                       <li>
-                        <Link to="/contact-us">Contact Us</Link>
+                        <NavLink to="/contact-us">Contact Us</NavLink>
                       </li>
                     </ul>
                   </Nav>
@@ -159,16 +171,114 @@ function NavBar() {
                 <div className="header-search">
                   <div className="search-box">
                     <div className="search-icon">
-                      <a href="#">
+                      <span onClick={() => setExtraInfo(true)}>
                         <FaSistrix />
-                      </a>
+                      </span>
                     </div>
                   </div>
                   <div className="extra-menu">
-                    <div className="extra-menu-icon">
-                      <a href="#">
+                    <div
+                      className="extra-menu-icon"
+                      onClick={() => setExtraInfo(true)}
+                    >
+                      <span>
                         <img src={menuIcon} alt="image" />
-                      </a>
+                      </span>
+                    </div>
+                    <div
+                      className={`${
+                        extraInfo
+                          ? "extra-menu-info activeInfo"
+                          : "extra-menu-info"
+                      }`}
+                    >
+                      <span
+                        className="close-extra-menu"
+                        onClick={() => setExtraInfo(false)}
+                      ></span>
+                      <div className="extra-info-text">
+                        <div className="extra-info-logo">
+                          <img src={mainLogo} alt="logo" />
+                        </div>
+                        <div className="search-input">
+                          <form>
+                            <input
+                              type="text"
+                              name="search"
+                              className="form-input"
+                              placeholder="Search here..."
+                              required
+                            />
+                            <button type="submit" className="sec-btn">
+                              <span>
+                                <FaSistrix />
+                              </span>
+                            </button>
+                          </form>
+                        </div>
+                        <p>
+                          There are many variations of passages of Lorem Ipsum
+                          available, but the majority have suffered alteration
+                          in some form, by injected humour, or randomised words
+                          which don't look even slightly believable.
+                        </p>
+                      </div>
+                      <div className="extra-info-text">
+                        <h3 className="h3-title">Categories</h3>
+                        <ul>
+                          <li>Web Design</li>
+                          <li>Ideas & Research</li>
+                          <li>Web Development</li>
+                          <li>SEO & Marketing</li>
+                        </ul>
+                      </div>
+                      <div className="extra-info-text">
+                        <h3 className="h3-title">Contacts</h3>
+                        <div className="footer-contact-box">
+                          <div className="footer-contact-link">
+                            <span className="icon">
+                              <FaMapMarkerAlt />
+                            </span>
+                            <a href="#">
+                              1247/Plot No. 39, 15th Phase, Colony, Kukatpally,
+                              Hyderabad
+                            </a>
+                          </div>
+                        </div>
+
+                        <div className="footer-contact-box">
+                          <div className="footer-contact-link">
+                            <span className="icon">
+                              <FaPhoneAlt />
+                            </span>
+                            <a href="#">1800-1700-1600</a>
+                            <a href="#">+91 989-645-5342</a>
+                          </div>
+                        </div>
+
+                        <div className="footer-contact-box">
+                          <div className="footer-contact-link">
+                            <span className="icon">
+                              <FaEnvelope />
+                            </span>
+                            <a href="#">info@gmail.com</a>
+                            <a href="#">services@gmail.com</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="extra-info-text">
+                        <div className="social-icon">
+                          <a href="" title="Follow on Facebook">
+                            <FaFacebookF className="extraLinkIcon" />
+                          </a>
+                          <a href="" title="Follow on Instagram">
+                            <FaInstagram className="extraLinkIcon" />
+                          </a>
+                          <a href="" title="Follow on Twitter">
+                            <FaTwitter className="extraLinkIcon" />
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

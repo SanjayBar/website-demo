@@ -7,6 +7,9 @@ import NewsLetter from "./component/newsLetter";
 import Experience from "./component/experience";
 import Footer from "./component/footer";
 import Pricing from "./component/pricing";
+import Portfolio from "./component/portfolio";
+import Expertise from "./component/expertise";
+import Testimonials from "./component/testimonials";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { OtechContext } from "./otechContext";
 
@@ -25,6 +28,9 @@ function App() {
         <NewsLetter />
         <Experience />
         <Pricing />
+        <Portfolio />
+        <Expertise />
+        <Testimonials />
         <Footer />
       </section>
     </>
